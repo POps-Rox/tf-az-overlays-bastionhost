@@ -6,7 +6,7 @@ terraform {
       version = "~> 3.22"
     }
     azurenoopsutils = {
-      source = "azurenoops/azurenoopsutils"
+      source  = "azurenoops/azurenoopsutils"
       version = "~> 1.0"
     }
   }
