@@ -2,7 +2,7 @@
 # Azure Region Lookup
 #----------------------------------------------------------
 module "mod_azure_region_lookup" {
-  source  = "azurenoops/overlays-azregions-lookup/azurerm"
+  source  = "github.com/POps-Rox/tf-az-overlays-azregionslookup"
   version = "~> 1.0.0"
 
   azure_region = "eastus"
@@ -14,7 +14,7 @@ module "mod_bastion_host" {
     azurerm_virtual_network.vnet
   ]
   source = "../.."
-  #source  = "azurenoops/overlays-bastionhost/azurerm"
+  #source  = "github.com/POps-Rox/tf-az-overlays-bastionhost"
   #version = "x.x.x"
 
   # By default, this module will create a resource group and 
