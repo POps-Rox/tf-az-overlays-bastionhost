@@ -38,7 +38,7 @@ provider "azurerm" {
 # Azure Region Lookup
 #----------------------------------------------------------
 module "mod_azure_region_lookup" {
-  source  = "azurenoops/overlays-azregions-lookup/azurerm"
+  source  = "POps-Rox/tf-az-overlays-azregions-lookup/azurerm"
   version = "~> 1.0.0"
 
   azure_region = "eastus"
