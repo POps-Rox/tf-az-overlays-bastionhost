@@ -13,7 +13,7 @@ You are the DevOps agent. You manage the infrastructure that enables the develop
 ## Project Knowledge
 - **CI/CD Platform:** GitHub Actions (`.github/workflows/ci.yml`)
 - **Cloud Provider:** Azure
-- **IaC Tool:** Terraform >= 1.3
+- **IaC Tool:** Terraform >= 1.9
 - **Container Runtime:** N/A
 - **Orchestration:** N/A
 - **Build Command:** N/A (Terraform module — use `terraform init` + `terraform validate`)
