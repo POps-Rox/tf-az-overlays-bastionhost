@@ -1,0 +1,43 @@
+# .teamwork/config.yaml — Project orchestration settings
+
+# Project identity
+project:
+  name: "tf-az-overlays-bastionhost"
+  repo: "POps-Rox/tf-az-overlays-bastionhost"
+
+# Active roles — only these roles participate in workflows
+roles:
+  core:
+    - planner
+    - architect
+    - coder
+    - tester
+    - reviewer
+    - security-auditor
+    - documenter
+    - orchestrator
+  optional:
+    - devops
+    - refactorer
+
+# Workflow customizations
+workflows:
+  skip_steps:
+    documentation:
+      - security-auditor
+    spike:
+      - tester
+      - security-auditor
+
+  extra_gates: {}
+
+# Quality gate defaults (apply to all workflows unless overridden)
+quality_gates:
+  handoff_complete: true
+  tests_pass: true
+  lint_pass: true
+
+# Memory settings
+memory:
+  archive_threshold: 50
+  sync_to_memory_md: true
