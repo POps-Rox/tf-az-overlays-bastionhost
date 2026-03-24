@@ -8,8 +8,8 @@ This file captures project learnings that persist across agent sessions.
 
 - **Repo:** `POps-Rox/tf-az-overlays-bastionhost`
 - **License:** MIT (Microsoft Corporation)
-- **Terraform:** >= 1.3
-- **Providers:** azurerm ~> 3.22, azurenoopsutils ~> 1.0
+- **Terraform:** >= 1.9
+- **Providers:** azurerm ~> 3.116, azurenoopsutils ~> 1.0.4
 
 ## What It Deploys
 
