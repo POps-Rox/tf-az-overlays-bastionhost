@@ -1,7 +1,7 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
-data "azurenoopsutils_resource_name" "bastion" {
+data "popsrox_resource_name" "bastion" {
   name          = var.workload_name
   resource_type = "azurerm_bastion_host"
   prefixes      = [var.org_name]
@@ -11,7 +11,7 @@ data "azurenoopsutils_resource_name" "bastion" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "bastion_pip" {
+data "popsrox_resource_name" "bastion_pip" {
   name          = var.workload_name
   resource_type = "azurerm_public_ip"
   prefixes      = [var.org_name, module.mod_azure_region_lookup.location_short, "bastion"]
@@ -21,7 +21,7 @@ data "azurenoopsutils_resource_name" "bastion_pip" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "bastion_snet" {
+data "popsrox_resource_name" "bastion_snet" {
   name          = var.workload_name
   resource_type = "azurerm_subnet"
   prefixes      = [var.org_name, module.mod_azure_region_lookup.location_short, "bastion"]

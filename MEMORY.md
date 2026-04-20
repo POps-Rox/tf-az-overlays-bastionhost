@@ -9,7 +9,7 @@ This file captures project learnings that persist across agent sessions.
 - **Repo:** `POps-Rox/tf-az-overlays-bastionhost`
 - **License:** MIT (Microsoft Corporation)
 - **Terraform:** >= 1.9
-- **Providers:** azurerm ~> 3.116, azurenoopsutils ~> 1.0.4
+- **Providers:** azurerm ~> 3.116, popsrox-utils ~> 1.0.4
 
 ## What It Deploys
 
@@ -21,7 +21,7 @@ This file captures project learnings that persist across agent sessions.
 
 ## Key Architecture Patterns
 
-- **Naming:** Uses `azurenoopsutils_resource_name` data sources for consistent Azure CAF naming. Custom names override via `custom_bastion_name`, `custom_public_ip_name`, `custom_ipconfig_name`.
+- **Naming:** Uses `popsrox_resource_name` data sources for consistent Azure CAF naming. Custom names override via `custom_bastion_name`, `custom_public_ip_name`, `custom_ipconfig_name`.
 - **Tagging:** Default tags via `locals-tags.tf` with `deployedBy`, `environment`, `workload` fields. Merged with user-provided `add_tags`.
 - **Module dependencies:** Consumes `tf-az-overlays-azregionslookup` (region short names) and `tf-az-overlays-resourcegroup` (optional RG creation) from the POps-Rox org.
 - **Resource group:** Either reference an existing one (`existing_resource_group_name`) or create a new one (`create_bastion_resource_group = true`).
