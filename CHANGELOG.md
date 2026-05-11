@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.0.0] - 2024-05-11
+
+### Changed
+
+**BREAKING CHANGES:**
+- **Provider upgrade**: Upgraded `azurerm` provider from `~> 3.116` to `~> 4.20`
+- **Terraform version**: Minimum Terraform version increased from `>= 1.9` to `>= 1.10`
+- **New provider**: Added `azapi` provider `~> 2.0` for future 4.x compatibility
+- **azurerm 4.x compatibility**: All resources validated against azurerm 4.x provider changes
+
+### Notes
+- This is a major version bump due to provider version constraints
+- No code changes required for bastion host resources - all arguments stable in 4.x
+- Cross-module dependencies on POps-Rox overlays require those modules to be upgraded to 4.x-compatible versions
+
 ## [Unreleased](https://github.com/Azure/terraform-verified-module/tree/HEAD)
 
 **Merged pull requests:**
